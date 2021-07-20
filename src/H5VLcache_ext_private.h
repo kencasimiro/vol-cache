@@ -9,24 +9,24 @@
 #include "cache_utils.h"
 
 /* Public headers needed by this file */
-#include "H5VLpublic.h"        /* Virtual Object Layer                 */
+#include "H5VLpublic.h" /* Virtual Object Layer                 */
 #include "H5LS.h"
 
 /* Public headers needed by this file */
-#include "H5VLcache_ext.h"        /* Public header for connector */
+#include "H5VLcache_ext.h" /* Public header for connector */
 
 /* Characteristics of the CACHE VOL connector */
-#define H5VL_CACHE_EXT_VERSION     0
+#define H5VL_CACHE_EXT_VERSION 0
 
 /* Names for dynamically registered operations */
-#define H5VL_CACHE_EXT_DYN_DREAD_TO_CACHE "anl.gov.cache.dread_to_cache"
-#define H5VL_CACHE_EXT_DYN_DPREFETCH "anl.gov.cache.dprefetch"
+#define H5VL_CACHE_EXT_DYN_DREAD_TO_CACHE   "anl.gov.cache.dread_to_cache"
+#define H5VL_CACHE_EXT_DYN_DPREFETCH        "anl.gov.cache.dprefetch"
 #define H5VL_CACHE_EXT_DYN_DREAD_FROM_CACHE "anl.gov.cache.dread_from_cache"
-#define H5VL_CACHE_EXT_DYN_DCACHE_REMOVE "anl.gov.cache.dcache_remove"
-#define H5VL_CACHE_EXT_DYN_DCACHE_CREATE "anl.gov.cache.dcache_create"
-#define H5VL_CACHE_EXT_DYN_DMMAP_REMAP "anl.gov.cache.dmmap_remap"
-#define H5VL_CACHE_EXT_DYN_FCACHE_REMOVE "anl.gov.fcache.remove"
-#define H5VL_CACHE_EXT_DYN_FCACHE_CREATE "anl.gov.fcache.create"
+#define H5VL_CACHE_EXT_DYN_DCACHE_REMOVE    "anl.gov.cache.dcache_remove"
+#define H5VL_CACHE_EXT_DYN_DCACHE_CREATE    "anl.gov.cache.dcache_create"
+#define H5VL_CACHE_EXT_DYN_DMMAP_REMAP      "anl.gov.cache.dmmap_remap"
+#define H5VL_CACHE_EXT_DYN_FCACHE_REMOVE    "anl.gov.fcache.remove"
+#define H5VL_CACHE_EXT_DYN_FCACHE_CREATE    "anl.gov.fcache.create"
 
 /* Parameters for each of the dynamically registered operations */
 
@@ -58,9 +58,9 @@ typedef struct H5VL_cache_ext_dataset_cache_create_args_t {
 
 /* H5VL_CACHE_EXT_DYN_FCACHE_CREATE */
 typedef struct H5VL_cache_ext_file_cache_create_args_t {
-    hid_t fapl_id;
-    hsize_t size;
-    cache_purpose_t purpose;
+    hid_t            fapl_id;
+    hsize_t          size;
+    cache_purpose_t  purpose;
     cache_duration_t duration;
 } H5VL_cache_ext_file_cache_create_args_t;
 
@@ -73,4 +73,3 @@ extern "C" {
 #endif
 
 #endif /* _H5VLcache_ext_private_H */
-
